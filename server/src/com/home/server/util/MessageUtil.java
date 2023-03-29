@@ -84,15 +84,15 @@ public class MessageUtil {
         }
     }
 
-    public void processFileMessage(String fileName, byte[] imgData) {
+    public void processFileMessage(String fileName, byte[] fileData) {
         try {
             File file = new File(fileName);
             FileOutputStream fos = new FileOutputStream(file);
-            fos.write(imgData, 0 , imgData.length);
+            fos.write(fileData, 0 , fileData.length);
             fos.flush();
             fos.close();
         } catch (Exception e) {
-            printLog("write img file failed :" + e.toString() ,LogUtil.DEBUG);
+            printLog("write file failed :" + e.toString() ,LogUtil.DEBUG);
             if (mCallback != null) {
                 mCallback.processComplete(SocketData.SERVER_FILE_SAVE_FAILED);
             }
