@@ -1,5 +1,5 @@
 # socketChat
-a simple Socket chat Server/Client
+Socket chat Server/Client
 基于java socket进行tcp连接的聊天服务
 1.Client端参考 client/SimpleCode.java使用
 SocketManager.java需要配置对应的server端IP
